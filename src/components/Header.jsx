@@ -7,10 +7,10 @@ import MobileHeaderMenu from "./MobileHeader"; // MobileHeaderMenu component
 export default function Header({ websiteLogo, websiteName, headerElements }) {
   // JSX Output
   return (
-    <header className="">
+    <header className="absolute w-full">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         {/* Flex container for header elements */}
-        <div className="flex h-16 items-center justify-between">
+        <div className=" flex h-16 items-center justify-between">
           {/* Conditionally display website logo or name on the left */}
           {/* Logo*/}
           {websiteLogo && <img className="h-8" src={websiteLogo} />}

@@ -40,7 +40,7 @@ export default function MobileHeaderMenu({ headerElements }) {
       </button>
       {/* Sliding menu */}
       <div
-        className={`fixed top-0 right-0 z-40 w-[85%] h-full bg-red-600 shadow-2xl px-6 pt-16 overflow-y-auto overscroll-y-none transition duration-500 ${
+        className={`fixed top-0 right-0 z-40 w-[85%] h-full bg-black shadow-2xl px-6 pt-16 overflow-y-auto overscroll-y-none transition duration-500 ${
           isOpened ? "translate-x-0" : "translate-x-full"
         } `}
       >
