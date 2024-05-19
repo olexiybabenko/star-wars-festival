@@ -5,6 +5,9 @@ import Header from "./components/Header"; // Header component
 import Section from "./components/Section"; // Section component
 import Button from "./components/Button"; // Button component
 import Signature from "./components/Signature"; // Signature component
+import Modal from "./components/Modal"; // Modal component
+import Form from "./components/Form"; // Form component
+import Input from "./components/Input"; // Input component
 // Images
 import logo from "./assets/star-wars-logo.png";
 import section1BgImage from "./assets/section1-bg-image.jpg";
@@ -126,6 +129,10 @@ function App() {
               views and thanks to our guests every media outlet talks about us.
             </p>
             {/* Button to call the modal */}
+            <Modal
+              title={"Become an Exhibitor"}
+              text={"Please enter your data to register"}
+            />
           </div>
         </div>
       </Section>
