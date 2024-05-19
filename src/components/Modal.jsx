@@ -29,11 +29,7 @@ export default function Modal({ title, text }) {
         className="!bg-black hover:!bg-red-600 !text-white md:!mx-0 mt-4"
       />
       {/* Dialog activated by button */}
-      <Dialog
-        open={isOpen}
-        onClose={handleClose}
-        className="relative z-50 transition"
-      >
+      <Dialog open={isOpen} onClose={handleClose} className="relative z-50 ">
         {/* The backdrop, rendered as a fixed sibling to the panel container */}
         <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
         {/* Full-screen container to center the panel */}

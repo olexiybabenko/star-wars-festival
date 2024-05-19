@@ -8,6 +8,7 @@ import Signature from "./components/Signature"; // Signature component
 import Modal from "./components/Modal"; // Modal component
 import Form from "./components/Form"; // Form component
 import Input from "./components/Input"; // Input component
+import Footer from "./components/Footer"; // Footer component
 // Images
 import logo from "./assets/star-wars-logo.png";
 import section1BgImage from "./assets/section1-bg-image.jpg";
@@ -41,7 +42,11 @@ function App() {
         <p className="text-center sm:text-lg md:text-xl lg:text-2xl pt-1">
           The biggest Star Wars Festival in Poland
         </p>
-        <Button text={"Get a ticket"} className={"mt-10"} href={"#tickets"} />
+        <Button
+          text={"Get your ticket"}
+          className={"mt-10"}
+          href={"#tickets"}
+        />
       </Section>
       {/* About us section */}
       <Section id={"about"} className={"max-w-screen-lg"}>
@@ -52,7 +57,7 @@ function App() {
             <h1 className="text-center sm:text-start text-wrap  text-3xl md:text-4xl  font-semibold">
               About us
             </h1>
-            <p className="text-wrap text-justify pt-1 sm:pt-2 lg:text-lg">
+            <p className="text-wrap text-center sm:text-justify pt-1 sm:pt-2 lg:text-lg">
               Join us during the VI edition of Star Wars Festival, New date
               coming soon at Ptak Warsaw Expo! Meet your favourite actors face
               to face during panels, see fantastic Cosplay Shows, and enjoy
@@ -122,7 +127,7 @@ function App() {
             <h1 className="text-center md:text-start text-wrap  text-3xl md:text-4xl  font-semibold">
               For exhibitors
             </h1>
-            <p className="text-wrap text-justify pt-1 sm:pt-2 lg:text-lg">
+            <p className="text-wrap text-center sm:text-justify pt-1 sm:pt-2 lg:text-lg">
               Our festiwal is a great opportunity not only to sell your wares,
               but to reach thousands of recipients through direct marketing &
               online marketing. We have over 120 000 engaged fans, millions of
@@ -136,6 +141,31 @@ function App() {
           </div>
         </div>
       </Section>
+      {/* Tickets section */}
+      <Section id={"tickets"} title={"Tickets"}>
+        <p className="text-wrap text-center pt-1 sm:pt-2 lg:text-lg">
+          Please create an account to get your{" "}
+          <span className="text-yellow-400 uppercase font-medium">free</span>{" "}
+          ticket
+        </p>
+        {/* Form */}
+        <Form buttonText={"Get your ticket"}>
+          <Input
+            type="email"
+            placeholder="Email"
+            autoComplete="email"
+            required
+          />
+          <Input
+            type="password"
+            placeholder="Password"
+            autoComplete="current-password"
+            required
+          />
+        </Form>
+      </Section>
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
