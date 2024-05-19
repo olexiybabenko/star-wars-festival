@@ -10,6 +10,7 @@ import logo from "./assets/star-wars-logo.png";
 import section1BgImage from "./assets/section1-bg-image.jpg";
 import chewbacca from "./assets/chewbacca.png";
 import section3BgImage from "./assets/section3-bg-image.jpg";
+import section4BgImage from "./assets/section4-bg-image.jpg";
 
 // Data
 import { HEADER_ELEMENTS, ATTRACTIONS } from "./data"; // Array with list of header elements
@@ -82,7 +83,7 @@ function App() {
           skilled.
         </p>
       </Section>
-      {/* atraction section */}
+      {/* Atraction section */}
       <Section id={"atractions"} title={"Atractions"}>
         {/* Flexbox of atraction tabs */}
         <div className="flex flex-wrap justify-center sm:justify-start gap-1 pt-3">
@@ -103,6 +104,30 @@ function App() {
               .description
           }
         </p>
+      </Section>
+      {/* For exhibitors section */}
+      <Section
+        id={"exhibitors"}
+        className={" !px-0 !py-0"}
+        fullWidth={true}
+        backgroundImage={section4BgImage}
+      >
+        {/* Flexbox of 2 columns */}
+        <div className="flex flex-wrap md:flex-nowrap">
+          {/* Column 1: Text */}
+          <div className="px-4 sm:px-6 lg:px-8 pt-8 pb-10 md:pb-12 md:pr-16 lg:pr-20 md:basis-7/12 xl:px-28 bg-yellow-400 !text-black md:diagonal-clip-path">
+            <h1 className="text-center md:text-start text-wrap  text-3xl md:text-4xl  font-semibold">
+              For exhibitors
+            </h1>
+            <p className="text-wrap text-justify pt-1 sm:pt-2 lg:text-lg">
+              Our festiwal is a great opportunity not only to sell your wares,
+              but to reach thousands of recipients through direct marketing &
+              online marketing. We have over 120 000 engaged fans, millions of
+              views and thanks to our guests every media outlet talks about us.
+            </p>
+            {/* Button to call the modal */}
+          </div>
+        </div>
       </Section>
     </>
   );
