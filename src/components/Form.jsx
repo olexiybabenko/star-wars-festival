@@ -20,7 +20,11 @@ export default function Form({
       {...props}
     >
       {children}
-      <Button text={buttonText} className={`mt-3 ${buttonClassName}`} />
+      <Button
+        type="submit"
+        text={buttonText}
+        className={`mt-3 ${buttonClassName}`}
+      />
     </form>
   );
 }

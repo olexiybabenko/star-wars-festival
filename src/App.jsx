@@ -9,6 +9,7 @@ import Modal from "./components/Modal"; // Modal component
 import Form from "./components/Form"; // Form component
 import Input from "./components/Input"; // Input component
 import Footer from "./components/Footer"; // Footer component
+import Toast from "./components/Toast"; // Toast component
 // Images
 import logo from "./assets/star-wars-logo.png";
 import section1BgImage from "./assets/section1-bg-image.jpg";
@@ -26,6 +27,18 @@ function App() {
   function handleSelectatraction(selectedAtraction) {
     // use setatraction - so that it would be watched by useState
     setSelectedAtraction(selectedAtraction);
+  }
+
+  // useState - show Toast
+  const [toastVisible, setToastVisible] = useState(false);
+  // handleGetTicket function
+  function handleGetTicket() {
+    // Make Toast visible
+    setToastVisible(true);
+    // After 3 seconds make Toast invisible
+    setTimeout(() => {
+      setToastVisible(false);
+    }, 3000);
   }
 
   // JSX Output
@@ -149,7 +162,8 @@ function App() {
           ticket
         </p>
         {/* Form */}
-        <Form buttonText={"Get your ticket"}>
+        <Form buttonText={"Get your ticket"} onSubmit={handleGetTicket}>
+          {toastVisible && <Toast message="Enrolled successfully!" />}
           <Input
             type="email"
             placeholder="Email"
